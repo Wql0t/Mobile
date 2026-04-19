@@ -12,7 +12,7 @@ import {
   View,
 } from 'react-native';
 
-export type SidebarItemId = 'profile' | 'cards' | 'create' | 'feed' | 'bookmarks';
+export type SidebarItemId = 'profile' | 'cards' | 'create' | 'acv';
 
 export type SidebarItem = {
   id: SidebarItemId;
@@ -39,8 +39,7 @@ export function SidebarDrawer({ enabled = true, items, onSelect, children }: Pro
       { id: 'profile', label: 'Мой профиль', icon: require('../../assets/profile.png') },
       { id: 'cards', label: 'Анкеты', icon: require('../../assets/Ancets.png') },
       { id: 'create', label: 'Создать анкету', icon: require('../../assets/createAncet.png') },
-      { id: 'feed', label: 'Лента', icon: require('../../assets/lenta.png') },
-      { id: 'bookmarks', label: 'Закладки', icon: require('../../assets/zakladki.png') },
+      { id: 'acv', label: 'Ачивки', icon: require('../../assets/acv.png')},
     ],
     []
   );

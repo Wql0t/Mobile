@@ -22,7 +22,6 @@ const PET_TYPES = [
   'Собака',
   'Кошка',
   'Хомяк',
-  'Бурмалдот',
   'Черепаха',
   'Рыба',
   'Енот',
@@ -507,7 +506,7 @@ export function CreateQuestionnaireScreen({ onBack, onComplete }: Props) {
 
         <View style={[styles.center, { paddingVertical: ui.centerPaddingVertical }]}>
           <View style={[styles.cardShell, { width: ui.cardW, height: ui.cardH }]}>
-            <Image source={CARD_ASSET} style={styles.cardImage} resizeMode="contain" />
+            <Image source={CARD_ASSET} style={styles.cardImage} resizeMode="stretch" />
 
             <View style={[styles.cardInner, innerPad]}>
               <ScrollView
@@ -566,8 +565,10 @@ const styles = StyleSheet.create({
 
   cardImage: {
     ...StyleSheet.absoluteFillObject,
-    width: '100%',
-    height: '100%',
+    width: 360,
+    marginLeft: -20,
+    height: 550,
+
   },
 
   cardInner: {

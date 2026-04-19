@@ -84,7 +84,7 @@ export function CardsScreen({ onBack, onSwipeLeft, onSwipeRight, onSwipeUp }: Pr
         subtitle: '67 мес',
         description:
           'Практический опыт показывает, что сложившаяся структура организации способствует повышению актуальности существующих финансовых и административных условий.',
-        image: require('../../assets/icon.png'),
+        image: require('../../assets/gr1.png'),
       },
       {
         id: '2',
@@ -92,7 +92,7 @@ export function CardsScreen({ onBack, onSwipeLeft, onSwipeRight, onSwipeUp }: Pr
         subtitle: '24 мес',
         description:
           'Разнообразный и богатый опыт говорит о том, что новая модель организационной деятельности требует анализа дальнейших направлений развития.',
-        image: require('../../assets/icon.png'),
+        image: require('../../assets/gr2.png'),
       },
       {
         id: '3',
@@ -100,7 +100,7 @@ export function CardsScreen({ onBack, onSwipeLeft, onSwipeRight, onSwipeUp }: Pr
         subtitle: '14 мес',
         description:
           'Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности обеспечивает актуальность новых предложений.',
-        image: require('../../assets/icon.png'),
+        image: require('../../assets/gr3.png'),
       },
     ],
     []

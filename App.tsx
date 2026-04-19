@@ -3,6 +3,7 @@ import { LoginScreen } from './src/screens/LoginScreen';
 import { RegisterScreen } from './src/screens/RegisterScreen';
 import { CardsScreen } from './src/screens/CardsScreen';
 import { ProfileScreen } from './src/screens/ProfileScreen';
+import { AchievementsScreen } from './src/screens/AchievementsScreen'
 import { ProfileDetailsScreen } from './src/screens/ProfileDetailsScreen';
 import { SidebarDrawer } from './src/ui/SidebarDrawer';
 import type { SidebarItemId } from './src/ui/SidebarDrawer';
@@ -10,7 +11,7 @@ import HomeScreen from './src/screens/index';
 import { CreateQuestionnaireScreen } from './src/screens/CreateQuestionnaireScreen';
 
 type Route = 'home' | 'login' | 'register' | 'main';
-type MainView = 'cards' | 'profile' | 'profileDetails' | 'createQuestionnaire';
+type MainView = 'cards' | 'profile' | 'profileDetails' | 'createQuestionnaire' | 'acv';
 type RegisterBackRoute = 'home' | 'login';
 
 export default function App() {
@@ -29,6 +30,10 @@ export default function App() {
     }
     if (id === 'create') {
       setMainView('createQuestionnaire');
+      return;
+    }
+    if (id === 'acv') {
+      setMainView('acv')
       return;
     }
     console.log('sidebar select', id);
@@ -61,7 +66,10 @@ export default function App() {
   if (route === 'main') {
     return (
       <SidebarDrawer enabled onSelect={handleSidebarSelect}>
-        {mainView === 'profile' ? (
+        {mainView === 'acv' ? (
+          <AchievementsScreen onBack={() => setMainView('acv')}/>
+        ) :
+        mainView === 'profile' ? (
           <ProfileScreen onSettings={() => setMainView('profileDetails')} />
         ) : mainView === 'profileDetails' ? (
           <ProfileDetailsScreen onBack={() => setMainView('profile')} />
@@ -76,6 +84,7 @@ export default function App() {
       </SidebarDrawer>
     );
   }
+
 
   return (
     <LoginScreen

@@ -104,19 +104,7 @@ export function ProfileDetailsScreen({ onBack }: Props) {
               </Pressable>
             </View>
 
-            <ImageBackground
-              source={require('../../assets/bgk.png')}
-              style={[
-                s.titleCard,
-                {
-                  height: ui.titleCardHeight,
-                  marginBottom: ui.titleCardMarginBottom,
-                  paddingHorizontal: isTablet ? 30 : 22,
-                },
-              ]}
-              imageStyle={s.titleCardImage}
-              resizeMode="stretch"
-            >
+            
               <Text
                 style={[
                   s.title,
@@ -128,24 +116,8 @@ export function ProfileDetailsScreen({ onBack }: Props) {
               >
                 Данные Профиля
               </Text>
-            </ImageBackground>
 
-            <View style={s.formWrap}>
-              <Image
-                source={require('../../assets/stebel.png')}
-                style={[
-                  s.stebel,
-                  {
-                    top: ui.stebelTop,
-                    right: isTablet ? -24 : -12,
-                    width: ui.stebelWidth,
-                    height: ui.stebelHeight,
-                  },
-                ]}
-                resizeMode="contain"
-                accessibilityIgnoresInvertColors
-              />
-
+            
               <View
                 style={[
                   s.fieldsCol,
@@ -191,21 +163,7 @@ export function ProfileDetailsScreen({ onBack }: Props) {
                 })}
               </View>
 
-              <Image
-                source={require('../../assets/star.png')}
-                style={[
-                  s.star,
-                  {
-                    left: ui.starLeft,
-                    bottom: ui.starBottom,
-                    width: ui.starSize,
-                    height: ui.starSize,
-                  },
-                ]}
-                resizeMode="contain"
-                accessibilityIgnoresInvertColors
-              />
-            </View>
+                          </View>
 
             <Pressable
               style={({ pressed }) => [
@@ -230,7 +188,7 @@ export function ProfileDetailsScreen({ onBack }: Props) {
                 ЗАВЕРШИТЬ
               </Text>
             </Pressable>
-          </View>
+          
         </SafeAreaView>
       </ImageBackground>
     </View>
@@ -293,6 +251,8 @@ const s = StyleSheet.create({
 
   title: {
     textAlign: 'center',
+    paddingBottom: 50,
+    paddingTop: 30,
     color: '#8a935e',
     fontFamily: FONTS.title,
     textTransform: 'uppercase',
